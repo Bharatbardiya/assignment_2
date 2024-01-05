@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Builder</title>
+</head>
+<body>
+    <div id="form-builder">
+        <h2>Form Builder</h2>
+        
+        <div id="form-fields">
+            <div id="field-label-pr">
+                <label for="field-label">Field Label:</label>
+                <input type="text" id="field-label" placeholder="Label" required>
+
+            </div>
+            <div id="field-type-pr">
+                <label for="field-type">Select Field Type:</label>
+                <select id="field-type" onchange="forSelect()" required>
+                    <option value="text">Text</option>
+                    <option value="email">Email</option>
+                    <option value="password">password</option>
+                    <option value="select">select</option>
+                    
+                </select>
+            </div>
+
+            <div id="field-require-pr" style="display: flex; gap: 10px; align-items: center;">
+                <label for="field-required" style="margin-top: 4px;">Required:</label>
+                <input type="checkbox" id="field-required" required>
+            </div>
+
+            <div style="display: flex; gap: 20px;">
+                <button onclick="addField()">add this fieldset</button>
+                <button onclick="resetField()">Reset</button>
+            </div>
+        </div>
+
+        <button onclick="generateForm()">Generate Form</button>
+
+        
+    </div>
+    <div id="form-builder" style="margin-top: 30px;">
+        <div id="generated-form">
+            
+            <h2>Generated Form</h2>
+        </div>
+    
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
